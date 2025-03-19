@@ -8,8 +8,14 @@
  */
 
 function detectPureColor(rgb) {
+    let { r, g, b } = rgb;
+    if( (r === 255 && g === 255) || (r === 255 && b === 255) || (g === 255 && b === 255)){return "no es puro"};
+    if( r === 255){return "red"};
+    if( g === 255){return "green"};
+    if(b === 255) {return "blue"}
+    
+    else {return ""}}
 
-}
 
 console.log(detectPureColor({ r: 255, g: 0, b: 0 })); // "red"
 console.log(detectPureColor({ r: 0, g: 255, b: 0 })); // "green"
